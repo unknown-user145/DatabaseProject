@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Courses</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/departments">Departments</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/instructors">Instructors</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Courses</h1>
+
+  <table>
+    <tr>
+      <th>Course ID</th>
+      <th>Course Name</th>
+      <th>Department ID</th>
+    </tr>
+    <% courses.forEach(course => { %>
+      <tr>
+        <td><%= course.course_id %></td>
+        <td><%= course.course_name %></td>
+        <td><%= course.department_id %></td>
+      </tr>
+    <% }); %>
+  </table>
+
+
+</body>
+
+</html>
